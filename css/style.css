@@ -1,0 +1,895 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  body {
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #1c1c1c;
+
+  /* Start Header */
+  }
+  header{
+  width: 100%;
+  background-color: black;
+	position: fixed;
+	align-items: center;
+	z-index: 3;
+}
+  .container {
+    margin: 0 auto;
+    max-width: 1440px;
+    align-items: center;
+    justify-content: space-between;	
+  }
+  .header__logo{
+    padding: 15px 15px;
+   }
+   
+   .logo1{
+     height: 50px;	
+     padding: 4px 15px;
+     display: inline-block;
+     user-select: none;
+   }
+  nav {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+  }
+  
+  nav .mainMenu {
+    display: flex;
+    list-style: none;
+  }
+  nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    transition: 0.2s ease;
+  }
+  .color__fonts{
+    list-style: none;
+    text-decoration: none;
+  }
+  .color__fonts:hover {
+    color: #d8b074;
+  }
+  .active-menu {
+  color: #d8b074 !important;
+  }
+  nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+  }
+  nav .mainMenu .closeMenu,
+  .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+  }
+  .header_btn {
+    background-color: #d8b074;
+    padding: 10px;
+    border-radius:10px ;
+    color: white;
+  }
+  .header_btn:hover{
+    background-color: #9e7332;
+  }
+  .header_btn:active{
+    background-color: #7e5417;
+  }
+  .fass{
+    margin-top: 7px;
+    margin-left: 7px;
+    margin-right: 5px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    background-color: #d8b074;
+    border-radius: 50%;
+  }
+.fa__icon{
+  display: flex;
+}
+.fa-solid{
+  text-decoration: none;
+}
+
+  @media (max-width: 948px) {
+    nav .mainMenu {
+      height: 100%;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      z-index: 100;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgb(0, 0, 0);
+      transition: top 0.5s ease 0s;
+      display: none;
+    }
+    nav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 35px;
+    }
+    nav .openMenu {
+      display: block;
+    }
+    nav .mainMenu li a:hover {
+      background: none;
+      color: #d8b074;
+    }
+  }
+
+
+/* End Header */
+
+
+/* Start Main-------------------- */
+
+/* Slides*/
+.slideshow__container{
+  max-width: 100%;
+  padding-top: 80px;
+  position: relative;
+  margin: auto;
+}
+.prev, .next{
+  cursor: pointer;
+  position:absolute;
+  top: 40%;
+  width: auto;
+  margin-top:32px;
+  padding:14px;
+  color: #d8b074;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.5s ease;
+  border-radius:0 3px 3px 0;
+}
+.next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+  background-color: rgb(0,0,0,0.3 );
+}
+.active, dot:hover{
+  background-color: #717171;
+}
+/* .fade{
+  -webkit-animation-name:fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+@-webkit-keyframes fade{
+  from{opacity:.4}
+  to{opacity: 1}
+}
+@keyframes fade{
+  from{opacity: .4}
+  to{opacity: 1} 
+} */
+/* EndSlide */
+
+#preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111111;
+  z-index: 44444;
+}
+#preloader.hide-preloader{
+  animation: hidePreloader 1s;
+}
+#preloader.preloader-hidden{
+  display: none;
+}
+
+@keyframes hidePreloader{
+  0%{
+    opacity: 0.8;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.icons__contact{
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  align-items: flex-end;
+  z-index: 1;
+}
+.fas{
+  cursor: pointer;
+  padding: 12px;
+  font-size: 24px;
+  color: white;
+  background-color: #d8b074;
+  border-radius: 50%;
+}
+.fas:hover{
+  
+  transition: 0.6s;
+  box-shadow: 0px 0px 5px 5px #d8b0747c;
+}
+.fa-envelope{
+  margin-left: 5px;
+}
+
+
+.container__after__main{
+  margin: 0 auto;
+  max-width: 1440px;
+  box-sizing: border-box;
+
+}
+h1{
+  border-left: 5px #d8b074 solid;
+  padding: 0 0 0 10px;
+  margin:10px 10px 15px ;
+  /* font-size: 35px; */
+  font-size: calc(16px + 19 * (100vw / 1440));
+  
+  color: white;
+}
+@media(max-width:767px){
+  h1{
+    font-size: calc(16px + (19 + 19 * 0.7 ) * ((100vw - 320px) / 1440));
+  }
+}
+
+
+.grid{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 10px
+}
+.grid2{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 10px
+}
+.grid-itm{
+  flex:0 1 calc(25% - 30px * 3/4);
+}
+.fa-circle-check{
+  background-color: #d8b074;
+  border-radius: 50%;
+}
+.grid-img{
+  width: 100%;
+  height: auto;
+  display: block;
+  /* margin-bottom: 30px; */
+}
+
+.sqr{
+  width: 340px;
+  height: 150px;
+  background-color: #3e3e3e;
+}
+.sqr1{
+  display: none;
+  width: 340px;
+  height: 150px;
+  background-color: #3e3e3e;
+}
+
+
+@media(max-width:1420px) {
+  .sqr{
+    width: 300px;
+  }
+}
+ /* Landscape - телефоны */
+ @media (max-width: 480px) {
+  .sqr{
+    display: none;
+  }
+  .sqr1{
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  .grid{
+    display: none;
+  }
+  .slides1{
+    padding: 0px 10px;
+  }
+ }
+ 
+ /* От ландшафтного экрана телефона до потретного планшета */
+ @media (max-width: 767px) {
+  .sqr{
+    display: none;
+  }
+  .sqr1{
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  .grid{
+    display: none;
+  }
+  .slides1{
+    padding: 0px 10px;
+  }
+ }
+
+ /* От портретного планшета до ландшафтного экрана и настольных дисплеев */
+ @media (min-width: 768px) and (max-width:1279px){ 
+  .sqr{
+    width: 100%;
+    display: block;
+  }
+  .sqr1{
+    width: 100%;
+    max-height:140px ;
+    margin: 0 auto;
+    display: none;
+  }
+  .grid{
+
+    display: block;
+  }
+  .slides1{
+    padding: 0px 20px;
+  }
+}
+
+ /* Большой дисплей */
+ @media (min-width: 1280px) { 
+  
+}
+/* ------------------------------- */
+
+/* -------------------------------- */
+
+h2,p{
+  color: white;
+}
+p{
+  font-weight: 400;
+}
+h2{
+  margin-bottom: 5px;
+}
+.grid-text{
+  margin: 10px;
+  padding: 25px 14px 14px 15px;
+}
+
+h2{
+font-size: calc(8px + 8 * (100vw / 1440));
+  
+color: white;
+}
+@media(max-width:1279px){
+h2{
+  font-size: calc(16px + (11 + 11 * 0.7 ) * ((100vw - 320px) / 1440));
+}
+p{
+  font-size: calc(12px + (9 + 9 * 0.7 ) * ((100vw - 320px) / 1440));
+}
+}
+ 
+.rev_slider .photo{
+  max-width: 100%;
+  padding-top:80px ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.slides{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+h3{
+  color: white;
+  border-left: 5px #d8b074 solid;
+  padding: 0 0 0 10px;
+  margin:10px 10px 15px ;
+  font-size: calc(12px + 19 * (100vw / 1440));
+}
+
+
+.box_car{
+  display:flex;
+  justify-content: space-between;
+  background-color: #3e3e3e;
+  margin: 0 10px;
+  
+}
+.box_image{
+  height: auto;
+  width: 377.14px;
+  
+}
+.box_description{
+  margin-right:auto;
+  padding-left:20px;
+  padding-top: 20px;
+  
+}
+.box_logoText{
+  color: white;
+  font-size: calc(8px + 12 * (100vw / 1440));
+  /* background-color: red; */
+}
+.box_Text{
+  /* background-color: green; */
+  margin-top:35px;
+}
+.box__describe{
+  display: flex;
+  list-style: none;
+  color: white;
+}
+.box__describe .box_detail{
+  border-left:3px #d8b074 solid;
+  padding-left:10px;
+  padding-right:10px;
+  
+}
+
+.box__describe .box_detaill{
+  border-left:3px #d8b074 solid;
+  padding-left:10px;
+  padding-right:10px;
+}
+.box_right{
+  border-right:3px #d8b074 solid;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+
+.box_buttonInfo{
+  display: block;
+  color: white;
+  text-decoration: none;
+  background-color: #d8b074;
+  padding: 20px;
+  position: relative;
+  top: 36%;
+  margin-right:20px ;
+}
+.box_buttonInfo:hover{
+  background-color: #717171;
+}
+@media(min-width:1024px){
+  .delete{
+    display: none;
+  }
+}
+@media(max-width:1220px){
+    .delete1220{
+      display: none;
+    }
+  
+}
+@media(max-width:1023px){
+  .delete1220{
+    display: block;
+  }
+}
+@media(max-width:1023px){
+  .box_car{
+    display: block;
+  }
+  .box_image{
+    height: auto;
+    width: 100%;
+  }
+  .box_logoText{
+    text-align: center;
+  }
+  .box_description{
+    width: 100%;
+    padding: 0 40px;
+  }
+  .box_Text{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    max-width: 100%;
+  }
+  .box__describe{
+    display: block;
+    
+  }
+  .box_detail{
+    margin-top: 10px;
+    font-size: calc(8px + 8 * (100vw / 1440));
+    
+  }
+  .box_detaill{
+    margin-top: 10px;
+    font-size: calc(8px + 8 * (100vw / 1440));
+    
+  }
+  .box__describe .box_detaill:nth-child(4){
+    border-right:0px #d8b074 solid;
+    padding-left:10px;
+    padding-right:10px;
+  }
+  .boxy{
+    display: none;
+  }
+  .box_button{
+    padding: 0 40px;
+    padding-bottom: 20px;
+  }
+  .box_buttonInfo{
+    text-align: center;
+    margin: 0;
+    
+  }
+  .box_right{
+    border: 0;
+  }
+  
+}
+/* EndRentCar */
+.block_allcar{
+  padding-top: 20px;
+}
+@media(max-width:500px){
+  .block_allcar{
+    padding:0 10px;
+    padding-top: 20px;
+  }
+  .allcar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+  }
+}
+.block_allcar{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.allcar{
+  text-decoration: none;
+  color: white;
+  background-color: #d8b074;
+  padding:15px 25px;
+}
+
+/* ourservices */
+.ourservices_about_us{
+  padding: 0 10px;
+  padding-bottom: 20px;
+}
+.ourservices_about_us_text{
+  font-weight: 200;
+  font-size: calc(8px + 8 * (100vw / 1440));
+}
+@media(max-width:502px){
+  .ourservices_about_us{
+    display: none;
+  }
+}
+.ourservices{
+  padding: 0 10px;
+}
+.ourservices_box{
+  display: flex;
+  justify-content: space-between;
+}
+.ourservices_img{
+  max-width: 50%;
+}
+.ourservices_text{
+  margin:0 auto;
+  margin-top: 9%;
+  font-size: calc(12px + 12 * (100vw / 1440));
+}
+.ourservices_border{
+  color: white;
+  padding-bottom:5px;
+  border-bottom: 5px #d8b074 solid;
+}
+.ourservishide{
+  display: none;
+}
+@media(max-width:650px){
+ .ourservisvisibility{
+  display: none;
+ }
+ .ourservishide{
+  display: block;
+ }
+ .ourservices_box{
+  display: block;
+ }
+ .ourservices_img{
+  max-width: 100%;
+}
+  .ourservices_text{
+    margin-left: auto;
+    margin-top: 0px;
+    padding: 10px 0;
+  }
+  .ourservices_border{
+    color: white;
+    padding-bottom:5px;
+    border-bottom: 5px #d8b074 solid;
+    max-width: 60%;
+  }
+  
+}
+.box_action{
+  display: flex;
+  justify-content: space-between;
+}
+
+.rentcar_about{
+  padding: 0 10px;
+  margin: 0 10px;
+  border-left: 5px #d8b074 solid;
+}
+.rentcarpremiumclass{
+  color:white;
+  font-size: 24px;
+}
+.rentcarpremiumclass_info{
+  font-size: 14px;
+}
+
+
+.sqr5{
+  display: none;
+  width: 340px;
+  height: 150px;
+  background-color: #3e3e3e;
+}
+
+
+.grid5{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 10px
+}
+.grid5-itm{
+  flex:0 1 calc(25% - 30px * 3/4);
+}
+.fa-circle-down{
+  color: #d8b074;
+  background-color: white;
+  border-radius: 50%;
+}
+.grid5-img{
+  width: 100%;
+  height: auto;
+  display: block;
+  /* margin-bottom: 30px; */
+}
+
+.sqr5{
+  width: 340px;
+  height: 100%;
+  background-color: #3e3e3e;
+}
+@media(max-width:1420px) {
+  .sqr5{
+    width: 300px;
+  }
+}
+ /* Landscape - телефоны */
+ @media (max-width: 480px) {
+  .sqr5{
+    display: none;
+  }
+  .sqr5{
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+ }
+ 
+ /* От ландшафтного экрана телефона до потретного планшета */
+ @media (max-width: 767px) {
+  .sqr5{
+    display: block;
+    width: 100%;
+  }
+  .grid5{
+    display: block;
+  }
+ 
+ }
+
+ /* От портретного планшета до ландшафтного экрана и настольных дисплеев */
+ @media (min-width: 768px) and (max-width:1279px){ 
+  .sqr5{
+    width: 100%;
+    display: block;
+  }
+  .sqr1{
+    width: 100%;
+    max-height:140px ;
+    margin: 0 auto;
+    display: none;
+  }
+  .grid5{
+
+    display: block;
+  }
+}
+.fa-car{
+  border-radius: 50%;
+  background-color: #d8b074;
+}
+.box_gift{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #3e3e3e;
+  height:100%;
+  margin: 0 10px;
+}
+footer{
+  height: 100%;
+  width: 100%;
+  margin-top: 25px;
+  border-top:2px #717171 solid ;
+  border-bottom:2px #717171 solid ;
+  
+}
+.container__inside__footer{
+  display:flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1440px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+}
+.box_gift_text{
+  padding-left: 20px;
+}
+.gift_img{
+  width: 35%;
+}
+.footer_logo_text{
+  font-size: 25px;
+  color: white;
+  border-left: 5px #d8b074 solid;
+  padding: 0 0 0 10px;
+  margin:10px 0px 15px ;
+}
+.footer_logo_textt{
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  border-bottom: 3px #d8b074 solid;
+  width: 80%;
+  padding: 10px 0 ;
+  margin:10px 0px 15px;
+}
+
+.footer_menu{
+  display: block;
+  
+}
+.li_footer{
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  margin-top: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.li_footer:hover{
+  color:#d8b074;
+}
+.p_footer{
+  font-size: 14px;
+}
+.a_footer{
+  display: flex;
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+  font-size: 14px;
+}
+@media(max-width:1000px) {
+  .container__inside__footer{
+    display: block;
+  }
+  .box_gift{
+    display: block;
+  }
+  .gift_img{
+    width: 100%;
+  }
+  
+}
+.after_footer{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+
+
+
+/* ------------------BestCarsWithDriver */
+
+.box_info_driver{
+  padding: 0 10px;
+  padding-bottom: 20px;
+}
+
+.box_driver{
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.text_driver{
+  margin: 0 10px;
+}
+.info_driverr{
+  display: none;
+}
+@media(max-width:1279px){
+  .info_driverr{
+    display: block;
+  }
+  .info_driver{
+    display: none;
+  }
+  .ourservices_imgg{
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+  }
+}
+.giftWithDriver{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
